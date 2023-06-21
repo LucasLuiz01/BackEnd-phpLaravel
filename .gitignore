@@ -1,3 +1,27 @@
+# Laravel
+vendor/
+composer.lock
+node_modules/
+.env
+
+# Publicly accessible directories
+public/storage/
+public/uploads/
+
+# Laravel Log Files
+storage/*.log
+
+# Laravel Cache Files
+bootstrap/cache/
+
+# Laravel Session and Cache Files
+storage/framework/sessions/
+storage/framework/cache/
+
+# Database Files
+database/migrations/
+database/seeds/
+
 # Logs
 logs
 *.log
