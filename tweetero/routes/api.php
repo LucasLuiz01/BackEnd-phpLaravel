@@ -20,3 +20,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::post('sign-up', 'App\Http\Controllers\AuthController@signUp');
 Route::post('tweet', 'App\Http\Controllers\TwwetController@tweet');
+Route::get('tweet', 'App\Http\Controllers\TwwetController@getTweet');

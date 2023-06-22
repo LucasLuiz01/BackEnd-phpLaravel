@@ -27,4 +27,15 @@ class TwwetController extends Controller
         $this->tweet->save();
         return response()->json(['msg'=> 'enviado com sucesso', 201]);
     }
+    public function getTweet(){
+       $last = $this->tweet->with('cadastro')->latest()->take(10)->get();
+       $tweets = $last->map(function($tweet){
+        return [
+            'username' => $tweet->cadastro->username,
+            'avatar' => $tweet->cadastro->avatar,
+            'tweet' => $tweet->tweet,
+        ];
+       });           
+        return response()->json($tweets);
+    }
 }

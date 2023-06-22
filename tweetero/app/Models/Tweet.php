@@ -9,4 +9,7 @@ class Tweet extends Model
 {
     use HasFactory;
     protected $fillable =['cadastro_id', 'tweet'];
+    public function cadastro(){
+        return $this->belongsTo('App\Models\Cadastro');
+    }
 }

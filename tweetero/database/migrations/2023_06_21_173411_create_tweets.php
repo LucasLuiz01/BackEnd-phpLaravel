@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Schema;
 class CreateTweets extends Migration
 {
     /**
-     * Run the migrations.
+2     * Run the migrations.
      *
      * @return void
      */
